@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  quotes:string[];
-
-  constructor(){
-    this.quotes = ['An hungry man is an angry man']
-  } 
-}
+export class AppComponent {}
