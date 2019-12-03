@@ -1,26 +1,29 @@
 <div class="row">
   <div class="col-md-4 m-auto">
-<form>
+<form (ngSubmit)='submitQuote()'#quoteform='ngForm'>
   <div class="form-group">
     <input
       type="text"
       class="form-control"
       id="exampleInputname"
       placeholder="Enter your name"
+      [(ngModel)]='newQuote.author' name="author" #author='ngModel' required
     />
   </div>
-  <textarea name="" id="text" cols="30" rows="10"placeholder ="Enter Quote"></textarea>
+  <textarea name="quote" id="text" [(ngModel)]="newQuote.quote" cols="30" #quote='ngModel' rows="10"placeholder ="Enter Quote"></textarea>
   <div class="form-group">
     <input
       type="text"
       class="form-control"
       id="exampleInputauthor"
       placeholder="Enter author"
+      [(ngModel)]='newQuote.author' name="author" #author='ngModel' required
     />
   </div>
-  <button type="button" class="btn btn-primary m-auto d-block" >submit Quote
+  <button type="submit" class="btn btn-primary m-auto d-block" >submit Quote
   </button>
 </form>
 </div>
+
 </div>
 

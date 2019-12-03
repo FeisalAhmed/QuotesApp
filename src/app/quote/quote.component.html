@@ -1,11 +1,16 @@
-<div>
+<div class=image>
   <h1>My Quotes</h1>
   <hr>
   <ul>
-    <li *ngFor='let quote of quotes; let i =index'>
-      {{quote.author}}
+    <li *ngFor='let quote of quotes; let i =index' class="card d-flex m-4 p-3">
+      <p>{{quote.author}}</p>
+      <p>{{quote.quote}}</p>
+      
       <app-quote-detail [quote]='quote'></app-quote-detail>
     </li>
   </ul>
+  <div class="col-md-6">
+  <app-form (addQuote)="addNewQuote($event)"></app-form>
+  </div>
 </div>
  
